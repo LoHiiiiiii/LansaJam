@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626922176853528682, guid: 3d61629f94b4e4e4ebe3dac1139cd84d, type: 3}
+      propertyPath: gravity
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626922176853528682, guid: 3d61629f94b4e4e4ebe3dac1139cd84d, type: 3}
+      propertyPath: walkSpeed
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626922176853528682, guid: 3d61629f94b4e4e4ebe3dac1139cd84d, type: 3}
+      propertyPath: coyoteTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626922176853528682, guid: 3d61629f94b4e4e4ebe3dac1139cd84d, type: 3}
+      propertyPath: jumpBuffer
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1626922176853528683, guid: 3d61629f94b4e4e4ebe3dac1139cd84d, type: 3}
       propertyPath: m_RootOrder
       value: 0
