@@ -65,7 +65,7 @@ public class Mover : MonoBehaviour {
 
 	private void Move(float x, float y) {
 		if (x != 0) {
-			var moveCheck = Physics2D.BoxCast(Rigidbody.position, collider.size, 0, Vector2.right, x + epsilon, groundMask);
+			var moveCheck = Physics2D.BoxCast(Rigidbody.position, collider.size * (1 + epsilon), 0, Vector2.right, x + epsilon, groundMask);
 			if (moveCheck.collider != null) {
 				x = Mathf.Sign(x) * Mathf.Max(0, moveCheck.distance - epsilon);
 				HSpeed = 0;
@@ -73,7 +73,7 @@ public class Mover : MonoBehaviour {
 		}
 
 		if (y != 0) {
-			var moveCheck = Physics2D.BoxCast(Rigidbody.position + Vector2.right * x, collider.size, 0, Vector2.up, y, groundMask);
+			var moveCheck = Physics2D.BoxCast(Rigidbody.position + Vector2.right * x, collider.size* (1+epsilon), 0, Vector2.up, y + epsilon, groundMask);
 			if (moveCheck.collider != null) {
 				y = Mathf.Sign(y) * Mathf.Max(0, moveCheck.distance - epsilon);
 				VSpeed = 0;
